@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">clickPA</string>
+    <string name="action_settings">About clickPA</string>
+    <string name="Nearby">Nearby</string>
+    <string name="Saved">Saved</string>
+    <string name="Map">Map</string>
+    <string name="Friends">Friends</string>
+    <string name="title_activity_nearby">NearbyActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Calendar">Calendar</string>
+    <string name="title_activity_calendar">clickPA Calendar</string>
+    <string name="title_activity_event_display">EventDisplayActivity</string>
+    <string name="title_activity_saved">Saved Events</string>
+    <string name="error_eventDisplay">Error: TextView not set to event (see class EventDisplayAcitivty.java) </string>
+    <string name="error_savedEvents">No events currently saved.</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="about_details">The co-created one-stop events central for high school students in and around Palo Alto. Come here to find fun local things to do. Send us your events, reviews, photos, and opportunities and we will share them. clickPA is hosted by people like you!</string>
+
+</resources>

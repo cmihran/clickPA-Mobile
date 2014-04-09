@@ -1,0 +1,76 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".HomeScreenActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/buttonNearby"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-75sp"
+            android:drawableTop="@drawable/ic_nearby"
+            android:paddingTop="75sp"
+            android:text="@string/Nearby"
+            android:textSize="25sp"
+            android:onClick = "chooseNearby" />
+
+        <Button
+            android:id="@+id/buttonSaved"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-75sp"
+            android:drawableTop="@drawable/ic_saved"
+            android:paddingTop="75sp"
+            android:text="@string/Saved"
+            android:textSize="25sp"
+            android:onClick = "chooseSaved" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/buttonMaps"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-75sp"
+            android:drawableTop="@drawable/ic_map"
+            android:paddingTop="75sp"
+            android:text="@string/Map"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/buttonCalendar"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-75sp"
+            android:drawableTop="@drawable/ic_calendar"
+            android:paddingTop="75sp"
+            android:text="@string/Calendar"
+            android:textSize="25sp"
+            android:onClick="chooseCalendar" />
+    </TableRow>
+
+</TableLayout>
