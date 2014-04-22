@@ -5,20 +5,21 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name="org.clickPA.prototype.clickPaApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.Clickpa" >
         <activity
-            android:name="clickPA.prototype.HomeScreenActivity"
+            android:name="org.clickPA.prototype.Activities.HomeScreenActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,35 +28,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="clickPA.prototype.NearbyActivity"
-            android:label="@string/title_activity_nearby"
-            android:parentActivityName="clickPA.prototype.HomeScreenActivity" >
+            android:name="org.clickPA.prototype.Activities.UpcomingActivity"
+            android:label="@string/title_activity_nearby" >
         </activity>
         <activity
-            android:name="clickPA.prototype.CalendarActivity"
-            android:label="@string/title_activity_calendar"
-            android:parentActivityName="clickPA.prototype.HomeScreenActivity" >
+            android:name="org.clickPA.prototype.Activities.CalendarActivity"
+            android:label="@string/title_activity_calendar" >
         </activity>
         <activity
-            android:name="clickPA.prototype.EventDisplayActivity"
-            android:label="@string/title_activity_event_display"
-            android:parentActivityName="clickPA.prototype.NearbyActivity" >
+            android:name="org.clickPA.prototype.Activities.EventDisplayActivity"
+            android:label="@string/title_activity_event_display" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="clickPA.prototype.NearbyActivity" />
+                android:value="clickPA.prototype.UpcomingActivity" />
         </activity>
         <activity
-            android:name="clickPA.prototype.SavedActivity"
-            android:label="@string/title_activity_saved"
-            android:parentActivityName="clickPA.prototype.HomeScreenActivity" >
+            android:name="org.clickPA.prototype.Activities.SavedActivity"
+            android:label="@string/title_activity_saved" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="clickPA.prototype.HomeScreenActivity" />
         </activity>
         <activity
-            android:name="clickPA.prototype.AboutActivity"
+            android:name="org.clickPA.prototype.Activities.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName="clickPA.prototype.HomeScreenActivity" >
+            android:parentActivityName="org.clickPA.prototype.Activities.HomeScreenActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="clickPA.prototype.HomeScreenActivity" />

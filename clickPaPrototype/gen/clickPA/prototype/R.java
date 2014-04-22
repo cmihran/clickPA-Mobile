@@ -24,34 +24,79 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_calendar=0x7f020000;
-        public static final int ic_friends=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int ic_map=0x7f020003;
-        public static final int ic_nearby=0x7f020004;
-        public static final int ic_saved=0x7f020005;
+        public static final int ab_background_textured_clickpa=0x7f020000;
+        public static final int ab_bottom_solid_clickpa=0x7f020001;
+        public static final int ab_solid_clickpa=0x7f020002;
+        public static final int ab_stacked_solid_clickpa=0x7f020003;
+        public static final int ab_texture_tile_clickpa=0x7f020004;
+        public static final int ab_transparent_clickpa=0x7f020005;
+        public static final int btn_cab_done_clickpa=0x7f020006;
+        public static final int btn_cab_done_default_clickpa=0x7f020007;
+        public static final int btn_cab_done_focused_clickpa=0x7f020008;
+        public static final int btn_cab_done_pressed_clickpa=0x7f020009;
+        public static final int cab_background_bottom_clickpa=0x7f02000a;
+        public static final int cab_background_top_clickpa=0x7f02000b;
+        public static final int ic_calendar=0x7f02000c;
+        public static final int ic_friends=0x7f02000d;
+        public static final int ic_launcher=0x7f02000e;
+        public static final int ic_map=0x7f02000f;
+        public static final int ic_nearby=0x7f020010;
+        public static final int ic_saved=0x7f020011;
+        public static final int list_focused_clickpa=0x7f020012;
+        public static final int list_pressed_clickpa=0x7f020013;
+        public static final int menu_dropdown_panel_clickpa=0x7f020014;
+        public static final int progress_bg_clickpa=0x7f020015;
+        public static final int progress_horizontal_clickpa=0x7f020016;
+        public static final int progress_primary_clickpa=0x7f020017;
+        public static final int progress_secondary_clickpa=0x7f020018;
+        public static final int selectable_background_clickpa=0x7f020019;
+        public static final int spinner_ab_default_clickpa=0x7f02001a;
+        public static final int spinner_ab_disabled_clickpa=0x7f02001b;
+        public static final int spinner_ab_focused_clickpa=0x7f02001c;
+        public static final int spinner_ab_pressed_clickpa=0x7f02001d;
+        public static final int spinner_background_ab_clickpa=0x7f02001e;
+        public static final int tab_indicator_ab_clickpa=0x7f02001f;
+        public static final int tab_selected_clickpa=0x7f020020;
+        public static final int tab_selected_focused_clickpa=0x7f020021;
+        public static final int tab_selected_pressed_clickpa=0x7f020022;
+        public static final int tab_unselected_clickpa=0x7f020023;
+        public static final int tab_unselected_focused_clickpa=0x7f020024;
+        public static final int tab_unselected_pressed_clickpa=0x7f020025;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000b;
-        public static final int buttonCalendar=0x7f090007;
-        public static final int buttonMaps=0x7f090006;
-        public static final int buttonNearby=0x7f090003;
-        public static final int buttonSaved=0x7f090004;
-        public static final int calendarView1=0x7f090000;
-        public static final int eventText=0x7f090001;
-        public static final int listview=0x7f090009;
-        public static final int savedText=0x7f09000a;
-        public static final int tableRow1=0x7f090002;
-        public static final int tableRow2=0x7f090005;
-        public static final int widget32=0x7f090008;
+        public static final int EventDateDay=0x7f090012;
+        public static final int EventDateMon=0x7f090010;
+        public static final int EventDateNN=0x7f090011;
+        public static final int EventDisplayDesc=0x7f090005;
+        public static final int EventDisplayImage=0x7f090002;
+        public static final int EventDisplayLocation=0x7f090004;
+        public static final int EventDisplayTitle=0x7f090003;
+        public static final int EventImg=0x7f090014;
+        public static final int EventTitle=0x7f090013;
+        public static final int VerticalSeparator=0x7f090015;
+        public static final int action_settings=0x7f090016;
+        public static final int buttonCalendar=0x7f09000c;
+        public static final int buttonMaps=0x7f09000b;
+        public static final int buttonSaved=0x7f090009;
+        public static final int buttonUpcoming=0x7f090008;
+        public static final int calcText=0x7f090000;
+        public static final int calendarView1=0x7f090001;
+        public static final int checkBox1=0x7f090006;
+        public static final int listview=0x7f09000e;
+        public static final int savedText=0x7f09000d;
+        public static final int tableRow1=0x7f090007;
+        public static final int tableRow2=0x7f09000a;
+        public static final int widget32=0x7f09000f;
     }
     public static final class layout {
         public static final int activity_about=0x7f030000;
-        public static final int activity_calendar=0x7f030001;
-        public static final int activity_event_display=0x7f030002;
-        public static final int activity_home_screen=0x7f030003;
-        public static final int activity_nearby=0x7f030004;
+        public static final int activity_blank=0x7f030001;
+        public static final int activity_calendar=0x7f030002;
+        public static final int activity_event_display=0x7f030003;
+        public static final int activity_home_screen=0x7f030004;
         public static final int activity_saved=0x7f030005;
+        public static final int activity_upcoming=0x7f030006;
+        public static final int list_item_event=0x7f030007;
     }
     public static final class menu {
         public static final int about=0x7f080000;
@@ -64,15 +109,18 @@ public final class R {
     public static final class string {
         public static final int Calendar=0x7f050008;
         public static final int Friends=0x7f050005;
+        public static final int Loading=0x7f050011;
         public static final int Map=0x7f050004;
-        public static final int Nearby=0x7f050002;
         public static final int Saved=0x7f050003;
+        public static final int Upcoming=0x7f050002;
         public static final int about_details=0x7f05000f;
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int error_eventDisplay=0x7f05000c;
         public static final int error_savedEvents=0x7f05000d;
         public static final int hello_world=0x7f050007;
+        public static final int none=0x7f050012;
+        public static final int save_event=0x7f050010;
         public static final int title_activity_about=0x7f05000e;
         public static final int title_activity_calendar=0x7f050009;
         public static final int title_activity_event_display=0x7f05000a;
@@ -80,7 +128,11 @@ public final class R {
         public static final int title_activity_saved=0x7f05000b;
     }
     public static final class style {
+        public static final int ActionBar_Solid_Clickpa=0x7f060004;
+        public static final int ActionBar_Transparent_Clickpa=0x7f060005;
+        public static final int ActionBarTabStyle_Clickpa=0x7f060008;
         public static final int ActionBarTheme=0x7f060002;
+        public static final int ActionButton_CloseMode_Clickpa=0x7f06000b;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -108,5 +160,13 @@ public final class R {
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int DropDownListView_Clickpa=0x7f060007;
+        public static final int DropDownNav_Clickpa=0x7f060009;
+        public static final int PopupMenu_Clickpa=0x7f060006;
+        public static final int ProgressBar_Clickpa=0x7f06000a;
+        public static final int Theme_Clickpa=0x7f060003;
+        /**  this style is only referenced in a Light.DarkActionBar based theme 
+         */
+        public static final int Theme_Clickpa_Widget=0x7f06000c;
     }
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dip"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/EventDateMon"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="#B1D587"
+        android:gravity="center_horizontal"
+        android:text="Mon"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/EventDateNN"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/EventDateMon"
+        android:background="#7DB536"
+        android:gravity="center_horizontal"
+        android:text="NN"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/EventDateDay"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/EventDateNN"
+        android:background="#7DB536"
+        android:gravity="center_horizontal"
+        android:text="Day"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/EventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/EventImg"
+        android:layout_toRightOf="@+id/VerticalSeparator"
+        android:gravity="left"
+        android:paddingLeft="15dip"
+        android:text="Title"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@id/EventImg"
+        android:layout_width="60dip"
+        android:layout_height="75dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:contentDescription="@string/none"
+        android:src="@drawable/ic_launcher"/>
+
+    <TextView
+        android:id="@id/VerticalSeparator"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/EventDateMon"
+        android:background="#C2DDBC"
+        android:visibility="invisible" />
+
+</RelativeLayout>

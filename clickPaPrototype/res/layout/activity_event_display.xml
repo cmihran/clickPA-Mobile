@@ -2,18 +2,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".EventDisplayActivity" >
 
+    <ImageView
+        android:id="@+id/EventDisplayImage"
+        android:layout_width="60dip"
+        android:layout_height="75dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:src="@drawable/ic_launcher" />
+
     <TextView
-        android:id="@+id/eventText"
+        android:id="@+id/EventDisplayTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/error_eventDisplay"
-        android:textSize= "18sp"
-        android:textColor= "@android:color/black" />
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/EventDisplayImage"
+        android:text="TITLE HERE"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/EventDisplayLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/EventDisplayTitle"
+        android:layout_toLeftOf="@id/EventDisplayImage"
+        android:text="LOCATION HERE"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/EventDisplayDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EventDisplayImage"
+        android:text="DESC HERE"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EventDisplayDesc"
+        android:text="Saved" />
 
 </RelativeLayout>

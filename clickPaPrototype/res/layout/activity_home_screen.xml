@@ -15,7 +15,7 @@
         android:layout_weight="1" >
 
         <Button
-            android:id="@+id/buttonNearby"
+            android:id="@+id/buttonUpcoming"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -23,9 +23,9 @@
             android:drawablePadding="-75sp"
             android:drawableTop="@drawable/ic_nearby"
             android:paddingTop="75sp"
-            android:text="@string/Nearby"
+            android:text="@string/Upcoming"
             android:textSize="25sp"
-            android:onClick = "chooseNearby" />
+            android:onClick = "chooseUpcoming" />
 
         <Button
             android:id="@+id/buttonSaved"

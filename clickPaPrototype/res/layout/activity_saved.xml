@@ -15,5 +15,16 @@
         android:text="@string/error_savedEvents"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
+    
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="fill_vertical"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:textSize="16sp"
+        android:scrollbars="vertical" >
+    </ListView>
 
 </RelativeLayout>
