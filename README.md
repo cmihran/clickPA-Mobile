@@ -1,10 +1,28 @@
-clickPA-Mobile
-==============
+<div align="center">
+  <a href="http://www.clickpa.org">
+    <img src="http://i.imgur.com/FDb9Nyc.png"></img>
+  </a>
+  <p> Android application for www.clickpa.org</p>
+</div>
 
-Mobile Android application for www.clickpa.org
+##Features##
+  
+####Home Page####
 
-Important Links:
+Used to navigate through the application
+- 4 Buttons:
+    - Upcoming
+    - Saved
+    - Map
+    - Calendar
+- Overflow Tab:
+    - About us
+    - *TODO:* Open in browser
 
-1st Introductory Presentation: https://docs.google.com/presentation/d/1JNwXFfLnD4movm5ZLni_eqx8ADBBMnS1D6_o9MQKhkQ/edit#slide=id.p
+####Upcoming Page####
+A list of upcoming events in Palo Alto
 
-Progress Tracker Spreadsheet: https://docs.google.com/spreadsheets/d/1cStuN2H6ZiwjvYOuzd9IW4GCAXmORe4LWEIGN5lJbKo/edit#gid=0
+For each event:
+- Displays the month, day number, and day
+- Shows title and location
+- Will only display events happening today or later
