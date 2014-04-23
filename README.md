@@ -25,4 +25,11 @@ A list of upcoming events in Palo Alto
 For each event:
 - Displays the month, day number, and day
 - Shows title and location
-- Will only display events happening today or later
+- Will not be shown if the event has passed (*will* be shown if it is happening today)
+- Tapping an event will open a more detailed description
+
+####Calendar####
+    WIP
+
+####Map#####
+    WIP
