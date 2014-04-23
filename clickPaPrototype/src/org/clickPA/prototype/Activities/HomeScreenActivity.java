@@ -17,7 +17,10 @@ import org.jsoup.select.Elements;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
 import clickPA.prototype.R;
 
 /**
@@ -43,10 +47,10 @@ public class HomeScreenActivity extends Activity {
 	private ArrayList<Event> events = new ArrayList<Event>();
 	// Contains all the elements JSOUP picks up
 	Elements elements;
-	
+
 	// Used to hold menu to add about tab later on
 	Menu menuInst;
-	
+
 	// Used to display loading dialog to user
 	ProgressDialog progress;
 
@@ -57,12 +61,30 @@ public class HomeScreenActivity extends Activity {
 		setContentView(R.layout.activity_home_screen);
 		setTitle("clickPA Mobile");
 
-		progress = new ProgressDialog(this);
-		progress.setTitle("Loading");
-		progress.setMessage("Downloading events ...");
-		progress.show();
+		if (isOnline(this)) {
+			progress = new ProgressDialog(this);
+			progress.setTitle("Loading");
+			progress.setMessage("Downloading events ...");
+			progress.show()
+			;setUpElements();
+		} else {
+			setContentView(R.layout.activity_blank);
+			TextView txt = (TextView) findViewById(R.id.blankText);
+			txt.setText("Couldn't connect to the internet. Please check your connection and restart the app.");
+		}
 		
-		setUpElements();
+	}
+
+	// Checks to see
+	public boolean isOnline(Context c) {
+		ConnectivityManager cm = (ConnectivityManager) c
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo ni = cm.getActiveNetworkInfo();
+
+		if (ni != null && ni.isConnected())
+			return true;
+		else
+			return false;
 	}
 
 	/* ------------ Populate event with Events from Website ------------ */
@@ -119,7 +141,8 @@ public class HomeScreenActivity extends Activity {
 				Element dateDayElement = entry.select(".ai1ec-weekday").first();
 				Element descElement = entry.select(".ai1ec-event-description")
 						.first();
-				//Element imageElement = entry.select(".ai1ec-event-avatar timely  ai1ec-content_img ai1ec-portrait").first();
+				// Element imageElement =
+				// entry.select(".ai1ec-event-avatar timely  ai1ec-content_img ai1ec-portrait").first();
 				Element imageURL = entry.select("[src]").first();
 				String img = imageURL.attr("abs:src");
 
@@ -131,12 +154,12 @@ public class HomeScreenActivity extends Activity {
 				eventParams[Constants.DAY] = dateDayElement.text();
 				eventParams[Constants.DESC] = descElement.text();
 				eventParams[Constants.IMG] = img;
-				
+
 				Event event = new Event(eventParams);
-				
-				if(Constants.LOGGING)
+
+				if (Constants.LOGGING)
 					LogEvent(eventParams);
-				if(!event.hasPassed())
+				if (!event.hasPassed())
 					events.add(event);
 
 			}
@@ -147,7 +170,7 @@ public class HomeScreenActivity extends Activity {
 		}
 
 		private void LogEvent(String[] eventParams) {
-			
+
 			Log.d(TAG, "Title and Loc: " + eventParams[Constants.TITLE_AND_LOC]);
 			Log.d(TAG, "Time: " + eventParams[Constants.TIME]);
 			Log.d(TAG, "Mon: " + eventParams[Constants.MON]);
@@ -155,7 +178,7 @@ public class HomeScreenActivity extends Activity {
 			Log.d(TAG, "Day: " + eventParams[Constants.DAY]);
 			Log.d(TAG, "Desc: " + eventParams[Constants.DESC]);
 			Log.d(TAG, "Img: " + eventParams[Constants.IMG]);
-			
+
 		}
 	}
 
