@@ -17,7 +17,7 @@ Used to navigate through the application
     - Calendar
 - Overflow Tab:
     - About us
-    - *TODO:* Open in browser
+    - Open in browser
 
 ####Upcoming Page####
 A list of upcoming events in Palo Alto
